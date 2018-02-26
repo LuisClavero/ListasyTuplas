@@ -7,9 +7,10 @@ for i in range(1,cant+1):
 	a.append(aux)
 print "La lista creada es: ",a
 cant=input("Cuantas palabras tendrá la lista a eliminar?")
-for p in range(1,cant+1):
-	aux=raw_input("Dígame la palabra "+str(p)+":")
+for e in range(1,cant+1):
+	aux=raw_input("Dígame la palabra "+str(e)+":")
 	b.append(aux)
-	a.remove(aux)
-print "La lista de palabras a eliminar es",b
+	while aux in a:
+		a.remove(aux)
+print "La lista de palabras a eliminar es:",b
 print "La lista ahora es:",a
