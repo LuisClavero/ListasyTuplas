@@ -1,15 +1,14 @@
 #coding: utf-8
-listaPal1=[]
-listaPal2=[]
+listaPal=[]
 cant=input("Cuantas palabras tendrá la lista?")
-for i in range(cant-1,-1,-1):
+for i in range(1,cant+1):
 	aux=raw_input("Dígame la palabra "+str(i)+":")
-	listaPal1.append(aux)
-	listaPal2.append(aux)
-	if listaPal2.count(aux)>1:
-		listaPal2.remove(aux)
-print "La lista creada es: ",listaPal1
-print "Y la lista sin repeticiones es: ",listaPal2
+	listaPal.append(aux)
+print "La lista creada es: ",listaPal
+for i in range(len(listaPal)-1,-1,-1):
+	if listaPal[i] in listaPal[:i]:
+		del listaPal[i]
+print "Y la lista sin repeticiones es: ",listaPal
 
 
 
